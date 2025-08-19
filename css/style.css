@@ -1,0 +1,239 @@
+:root {
+    --font-family-title:"Luckiest Guy", cursive;
+    --font-family-text:"Open Sans", sans-serif;
+    
+    --color-light:#fff;
+    --color-dark:#23272A;
+    --color-light-gray:#F6F6F6;
+  
+  
+}
+
+
+
+
+
+
+html {
+  box-sizing: border-box;
+  font-family: var(--font-family-text);
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+/* Estilo Header */
+
+header {
+    width: 100%;
+    height: 28.6875rem;
+    background-image: url(../assets/images/banner-header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.header-container {
+    width: 47.3125rem;
+    height: 16.875rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.header-container .title-header {
+    font-family: var(--font-family-title);
+    color: var(--color-light);
+    font-size: 3.5rem;
+}
+
+.header-container .text-description{
+    color: var(--color-light);
+    font-family: var(--font-family-text);
+    font-size: 1rem;
+}
+
+.buttons-header {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    border-radius: 1.75rem;
+    border:none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    
+}
+
+.download-btn {
+    background-color: var(--color-light);
+    
+}
+
+.abrir-desktop {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+/* Content Main do site */
+
+
+.container-site {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilos para a seção principal */
+.feature-section {
+    padding: 2rem; 
+    margin: 0 auto; 
+    width: 100%; 
+}
+
+
+.feature-content {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 2rem; 
+    max-width: 971px; 
+    margin: 0 auto; 
+}
+
+
+.feature-reverse .feature-content {
+    flex-direction: row-reverse;
+}
+
+.feature-section + .feature-reverse {
+    background-color: var(--color-light-gray);
+}
+
+.feature-image {
+    flex: 1; 
+}
+
+.feature-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilos do texto */
+.feature-text {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8rem; 
+}
+
+.feature-text h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem); 
+    font-weight: 800;
+}
+
+.feature-text p {
+    font-size: clamp(0.875rem, 2vw, 1rem); 
+    line-height: 1.5;
+}
+
+
+.feature-column {
+    display: flex;
+    flex-direction: column-reverse!important;
+    align-items: center;
+    gap: 0.8rem;
+    text-align: center;
+}
+
+
+.feature-column-text h2 {
+    font-family: var(--font-family-title);
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+
+footer {
+    height: 8.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-dark);
+}
+
+
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    
+    header {
+        height: 31.5625rem;
+        align-items: center;
+    }
+    
+    .header-container {
+        gap: 0.5rem;
+        text-align: left;
+        padding: 1rem;
+    }
+    
+    .header-container .title-header {
+        font-size: 2rem;
+    }
+    
+    .buttons-header {
+        flex-direction: column;
+    }
+ 
+    .feature-content {
+        flex-direction: column; /* Em telas menores, os itens ficam um abaixo do outro */
+        
+    }
+
+    .feature-reverse .feature-content {
+        flex-direction: column; /* Garante que a ordem seja a mesma em telas pequenas */
+    }
+    
+    .feature-column {
+        text-align: left;
+    }
+    
+    .feature-text h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
